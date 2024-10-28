@@ -94,7 +94,7 @@ def index():
             mse, r2, mae = eval_lassor(y_test, model.predict(X_test_scaled))
         
 
-    return render_template("indes.html", gia_du_doan=gia_du_doan, mse=mse, r2=r2, mae=mae)
+    return render_template("index.html", gia_du_doan=gia_du_doan, mse=mse, r2=r2, mae=mae)
 
 if __name__ == "__main__":
     app.run(port=5000)
