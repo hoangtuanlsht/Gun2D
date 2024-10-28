@@ -97,4 +97,4 @@ def index():
     return render_template("indes.html", gia_du_doan=gia_du_doan, mse=mse, r2=r2, mae=mae)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=5000)
