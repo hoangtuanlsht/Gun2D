@@ -92,4 +92,4 @@ def index():
     return render_template("index.html", gia_du_doan=gia_du_doan, mse=mse, r2=r2, mae=mae)
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))  # Thử thay đổi cổng thành 10000
-    app.run(host="0.0.0.0", 
+    app.run(host="0.0.0.0", port=port)
