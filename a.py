@@ -91,4 +91,5 @@ def index():
             mse, r2, mae = eval_lassor(y_test, model.predict(X_test_scaled))
     return render_template("index.html", gia_du_doan=gia_du_doan, mse=mse, r2=r2, mae=mae)
 if __name__ == "__main__":
-    app.run(port=5000)
+    port = int(os.environ.get("PORT", 5000))  # Thử thay đổi cổng thành 10000
+    app.run(host="0.0.0.0", 
