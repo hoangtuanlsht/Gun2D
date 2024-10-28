@@ -18,8 +18,8 @@ numeric_cols = dc.select_dtypes(include=[np.number]).columns
 dc[numeric_cols] = dc[numeric_cols].fillna(dc[numeric_cols].mean())
 
 # Biến độc lập và biến phụ thuộc
-X = dc[['Area', 'Frontage', 'Access Road', 'Floors', 'Bedrooms', 'Bathrooms']]
-y = dc['Price']
+X = dc[['Area', 'Frontage', 'Access Road', 'Floors', 'Bedrooms', 'Bathrooms']].values.astype(np.float32)
+y = dc['Price'].values.astype(np.float32)
 
 # Tính Z-score và loại bỏ các outliers
 z_scores = np.abs(stats.zscore(X))
