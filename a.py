@@ -92,7 +92,7 @@ def index():
             model, y_pred = train_and_predict_lassor(X_train, y_train, X_test_scaled)
             gia_du_doan = y_pred[0]
             mse, r2, mae = eval_lassor(y_test, model.predict(X_test_scaled))
-        return render_template("indes.html", gia_du_doan=gia_du_doan, mse=mse, r2=r2, mae=mae)
+        
 
     return render_template("indes.html", gia_du_doan=gia_du_doan, mse=mse, r2=r2, mae=mae)
 
